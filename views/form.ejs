@@ -1,0 +1,57 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body class="container">
+
+<header>
+</header>
+
+<main>
+  <div class="jumbotron">
+      <h1>Form</h1>
+      <h2>Questions</h2>
+      <form action="/answerForm" method = "post">
+        <h2><%= info[0].name %> - <%= info[0].id %></h2>
+        <input type="hidden"
+          name="key"
+          id="key"
+          value=<%= info[0].id %>
+        <ul>
+          <li>Question 1: Whats you name?
+            <input type="text"
+              id="name"
+              name="name"
+              value="">
+          </li>
+          <li>Question 2: Whats your age?
+            <input type="number"
+              id="age"
+              name="age"
+              value="">
+          </li>
+          <li>Question 3 Whats your shoe size?
+            <input type="number"
+              id="size"
+              name="size"
+              value="">
+          </li>
+          <input type="hidden"
+            name="title"
+            id="title"
+            value=<%= info[0].name %>
+        </ul>
+        <button>Submit Answers</button>
+      </form>
+
+  </div>
+</main>
+
+<footer>
+  <a href="/listForms">Go to all forms list.</a>
+</footer>
+
+</body>
+</html>

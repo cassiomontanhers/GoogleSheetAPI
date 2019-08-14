@@ -1,0 +1,42 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body class="container">
+
+<header>
+</header>
+
+<main>
+  <div class="jumbotron">
+      <h1>Form</h1>
+      <h2>Create new Form</h2>
+      <form action="/createForm" method = "post">
+        <ul>
+          <li>Insert the title of the form:
+            <input type="text"
+              id="title"
+              name="title"
+              value="">
+          </li>
+          <li>
+            To keep things simple, the form can always have the same content
+          </li>
+          <li>
+            name, age, shoe size
+          </li>
+        </ul>
+        <button>Create Form</button>
+      </form>
+
+  </div>
+</main>
+
+<footer>
+  <a href="/listForms">Go to all forms list.</a>
+</footer>
+
+</body>
+</html>

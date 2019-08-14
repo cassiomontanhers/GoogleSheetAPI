@@ -1,0 +1,43 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body class="container">
+
+<header>
+</header>
+
+<main>
+  <div class="jumbotron">
+      <h1>Form List</h1>
+      <p>Welcome to FORMs - Select one form to answer</p>
+      <h2>Available Forms</h2>
+      </br>
+      <hr>
+      <ul>
+          <% for (var [key, value] of forms.entries()) { %>
+            <li>
+              <form action="/getForm" method = "get">
+                <b>Name:</b> <%= value.name  %> - <b>FormId:</b> <%= key %>
+                <input type="hidden"
+                  name="key"
+                  value=<%= key  %>>
+                <button>Answer this Form</button>
+              </form>
+            </li>
+          <% } %>
+          <!-- <% forms.forEach(function(form) { %>
+              <li><%= form.name %> - <%= form.id %></li>
+          <% }); %> -->
+      </ul>
+  </div>
+</main>
+
+<footer>
+  <a href="/">Go back to Home.</a>
+</footer>
+
+</body>
+</html>
